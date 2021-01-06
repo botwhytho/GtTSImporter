@@ -10,10 +10,6 @@ GtJSClass >> accesses [
 { #category : #'*GtTSImporter' }
 GtJSClass >> initialize [
 	super initialize.
-	(self class instVarNames includes: #accesses)
-		ifFalse: [ (RBAddInstanceVariableRefactoring
-				variable: 'accesses'
-				class: self class) execute ].
 	accesses := FMNullMultivalueLink
 		on: self
 		opposite: #accessor:

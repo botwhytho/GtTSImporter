@@ -1,1 +1,1 @@
-Package { #name : #GtTSImporter}
+Package { #name : #GtTSImporter }

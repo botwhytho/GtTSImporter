@@ -20,8 +20,8 @@ BaselineOfGtTSImporter >> postLoadRefactorings [
 		ifFalse: [ (RBAddInstanceVariableRefactoring
 				variable: 'accesses'
 				class: GtJSClass) execute ].
-	TypeScriptParser
+	TypeScriptParser class
 		compile:
 			'defaultStartingState
-				^ self startingStateForModule'
+	^ self startingStateForModule'
 ]

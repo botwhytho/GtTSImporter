@@ -3,7 +3,7 @@ Extension { #name : #GtJSImporter }
 { #category : #'*GtTSImporter' }
 GtJSImporter >> localFilename: aString from: aNode [
 	| currentDirectory name |
-	"currentDirectory := aNode topParent filename asFileReference parent."
+	currentDirectory := aNode topParent filename asFileReference parent.
 	name := (aString substrings: '/\')
 		inject: currentDirectory
 		into: [ :sum :each | 

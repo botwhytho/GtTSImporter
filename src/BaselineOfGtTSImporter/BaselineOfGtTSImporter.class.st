@@ -11,17 +11,5 @@ BaselineOfGtTSImporter >> baseline: spec [
 		for: #common
 		do: [ spec
 				package: 'GtTSImporter'
-				with: [ spec postLoadDoIt: #postLoadRefactorings ] ]
-]
-
-{ #category : #'post load' }
-BaselineOfGtTSImporter >> postLoadRefactorings [
-	(GtJSClass instVarNames includes: #accesses)
-		ifFalse: [ (RBAddInstanceVariableRefactoring
-				variable: 'accesses'
-				class: GtJSClass) execute ].
-	TypeScriptParser class
-		compile:
-			'defaultStartingState
-	^ self startingStateForModule'
+				]
 ]

@@ -18,6 +18,14 @@ GtTSImporter >> importJSFile: aFile [
 
 { #category : #initialization }
 GtTSImporter >> initialize [
+
 	super initialize.
 	self parserClass: TypeScriptParser.
+	model sourceLanguage: FAMIXTSSourceLanguage new
+]
+
+{ #category : #accessing }
+GtTSImporter >> parserClass [
+
+	^ parserClass ifNil: [ TypeScriptParser ]
 ]
